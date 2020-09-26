@@ -1,0 +1,22 @@
+Week1 Chatbot.:
+
+Serverless ante meaning:
+1.Serverless ante server ni manam manage cheyyam but anyway oka application run avvali ante server kavalsinde but aa server ni manam deploy cheyalsina avasram ledu AWS valle deplay chesintaru and manam just use chestam.Mari ec2 ante yenti ec2 ante manam sonthanga server ni create cheyatam.So aa server lo manam manaki kavalsina application ni run chestam.And aa server ni manaku thaggattu run chestam but aa server physical ga manam manage cheyyam aws chuskuntundi.
+2.S3 section lo static website hosting kosam bucket ni use cheskovachchu.Ante aa static website ki kavalsina front end content antha bucket lo store cheste aa data ni chupinchatam aws chuskuntundi.
+
+1.Fulfillment ante nee bot collect chesina data ni application ki pampali kadha ante suppose nuvvu oka ticket booking ni adigav anuko aa ticket book cheyali kadha bot so anduku 
+aa ticket ki sambandhichina details like destination source date of travel ivanni teliyali kadha 
+website ki so avvani pamapataniki Fullfillment use chestam.
+2.Poly anedi oka AWS service so aws roles anevi oka service inko service ni use cheyataniki
+manam ilanti roles create chestam and poly ni use chesi speech ni text ga convert chesi 
+bot artham cheskuntundi.
+
+
+Week1 S3:
+
+Ikkada server use cheyakunda s3 bucket lo website ki sambandhinchina data ni store chesi 
+aa website ni access chestunnam.
+Static website ante data base tho interaction  leni website.
+So s3 bucket lo mana index.html file ni upload chesi aa file ni read chestunnam.I mean automatic ga first page yem chupinchali ante aa page ne chupisthundi.
+
+

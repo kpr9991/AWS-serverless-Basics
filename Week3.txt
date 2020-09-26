@@ -1,0 +1,49 @@
+Assalu em chestunnam:
+GET request ki POST request ki difference yenti ante, GET ante client pampinche query string lone vaadiki yem kavali ane details untayi.
+POST ante client request pampinchinappudu aa request tho paatu,code pamputhadu aa code lo query chesey content untundi and not in the query string.So ala pass chesedanni 
+we call as POST request.
+
+1.First " CloudWatch " yendukante lambda ki vachchina requests ni log cheskovali ante assalu yekkada nundi vachchindi anedi save cheskovali kadha,yem avasram antava just teluskuneki working aa kaddha anni components architecture lo ani.
+2.Now Ala teluskovataniki lambda function ki cloud watch service use cheskuneki role create
+chesi istunnam.
+3.Assalu architecture yenti ani teslusko first,Ikkada architecture em ledu just oka user oka website URL ni request cheyagane aa request ni s3 serve chesthundi.
+4.Nexxt time aa website lo city ni select cheyagane API gateway ki request velthundi aa city name ,Ippudu API gateway lamba function ni call chesi aa lambda function ki client nundi recieve cheskunna query string oh lekunte client nundi request chesina data no yedho data ni pass chestundi Lambda ki anthe.
+5.API create chesina tarvaatha Script folder lo config.js file lo aa api ki vachchcina invoke url ni paste cheyyali and config.js file ni delete chesi malli upload chestam aa edit chesi.
+Daaniki public access ivvali and daaniki meta data lo cache control ni max-age=0 ani ivvali.
+6.Danni invoke cheyali ante i mean aa website ni invoke cheyali ante ,either s3 lo text.html file ni open chey lekunte cloud front lo aa s3 bucket ki url create chesi daanitho invoke cheyachchu.
+
+InkaCommonGacheppalante::---
+1.Manam s3 pruthvirajk bucket click chesi andulo text.html ni open chesinam ante first query string lo name ni pass cheyatam chusam.
+2.AA name ni API gateway teesukuni lambda function ki pass chesi, ippudu lambda fucntion aa name tho yemanna output ante oka response ichchindi.Now a response ni user ki API gateway tirigi pampinchindi.
+3.Idhi first thing.
+4.Query string ante ---- Just url manam browser lo type chestame adhi.
+5.Now Akkada Query string ki name add chesam.(?Name ani petti invoke chesam ga adhi).
+Two types of requests unnayi client nundi server ki data ni pass cheseki client nundi,
+Query string use chesi dennii GET method teesukuntundi API gateway lo , So API gateway lo query strings ane dantlo Name ane query string ivvali METHOD REQUEST lo deenivalla,
+aa API gateway aa client nundi vachchina method request ni teesukuni Integrated request ga chesthundi.Now integration request ante yenti??
+GET and POST methods ni create chesina tarvatha akkda four vacchayi console lo chuudu,
+1.Method request ante user request chesina URL and user nundi query string kavali ante dantlo ki velli i mean method request loki velli ivachchu.
+2.Integration request ante API gateway data ni client nundi teesukunna tarvatha aa data ni Oka request roopamlo lambda ki pampali and pamputhundi.Now lambda aa request ni teesukuni output pamputhundi aa output ne response antam.
+AA response ni client ki pamputhundi aa response eh ikkada manam chustunna weather data update ayyinadhi.
+
+
+
+1.IAM role ki best example amazon lex amazon polly use chesi speech  ni text ga convert chesthundi.
+2.su - switch user ani.
+3.Normal IAM role ante just aa role dharinchinavaadiki yem permissions untayi ani maname select cheyali.And thats it , oka user ki oka chinna service use cheyali ante koththa IAM user ni create cheyakunda just oka role create chesiste chaalu deenivalla task chinnaga chesinattu.
+
+
+1.Lambda anedi code isthe server lekunda i mean aws valla servers lo code ni run chese 
+service.
+2.Lambda lo funciton create chesi manam danni run chestam aa function yen chestundi ante
+just aa code ni run chestundi ante manam yedanna service ki trigger ga lambda ni pettam anuko appudu aa lamda function ki call jarigi Adhi response return chesthundi.
+3.Event Payload ante aa aws service deenki data ni pass cheyali kadha ante ee lambda function ni yeh service call chesindo aa service yedho teliyali kadha lambda function ki 
+so aa service pampinche data ni event object lo store ayyintundhi.
+
+CloudWatch Logs::Just yekkada nundi yevar login ayyar time and details anni logs la store avuthayi.
+Loggroups okko service ki okkoti untadhi.Ante okko AWS service ki okkoti untundi and logstream ante oka stream of logs ante oka collection of logs ani meaning.
+
+45 min Content:----
+
+1.AA lambda function cloud watch lo logs create cheyali kadha yevar danni invoke chesaru yeppudu invoke chesaru anna details ni so cloud watch service ni use cheskuneki daaniki
+oka role create chesi icchham aa service ni use cheskuneki.

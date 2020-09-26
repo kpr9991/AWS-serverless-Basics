@@ -1,0 +1,24 @@
+1.Cloud Front:Lowest latency tho data ni transfer cheyataniki use chestam cloud front.
+1.Cloud front ante content delivery network.
+Ante Same edge location ante neeku telsu ga edge location ante user ki access cheyataniki,
+latency time takkuva undali ani data ni cache chestam kadha alane,cloud front anedi 
+aws vaalla content delivery network.
+2.Usual ga s3 bucket lo object ni upload chesina tarvaatha aa bucket ki url vasthundi so aa url use chesi aa object ki okavela public access ichchinte aa url ki pogane aa object content kanipisthundi.
+3.Now oka cloud front webdistribution create chesav anuko,Usual ga cloud front distributionn create chesedi s3 buckets ki.
+4.Ante s3 buckets ki create chesina tarvaatha,vaatiki cloud front distribution create chesav ante,cloud front content delivery network kosam oka seperate url create chestundi,aa cloud front DNS use chesi we can access the content of s3 bucket.
+5.So s3 bucket ki public access ni lock chesav anuko appudu cloud front distribution DNS use chesi aa s3 bucket content ni access cheyachchu.
+6.Ikkada Direct origin access ni block cheyachchu ante oka user data ni request cheste ,direct ga s3 bucket ni access chesi data ni ivvalsina avasram ledu.Just edge location lo cache ayyina content ni cloud front DNS use chesi access cheyachchu adhe advantage.
+7.Deenivalla s3 bucket lo unna data safe ga untadhi.
+
+
+API:Course notes lo raskunna content kuuda chaduvko.And 45 min reading content unde adhi chusko anni weeks ki.
+
+1.MOCK api ante,just oka API request vachchindi ante manam yekkdo data base nundi vethaktam kante,hardcoded json file ni pamputhunnam.So deeni valla just api gateway working aa kaadha ani artham cheskovachchu.
+2.Final ga ikkada yem chesam:Week 2 Reading 45 minutes dhi chaduvu.
+1)Oka Api gateway create chesi aa gateway ki yem request vachchina POST method use chesi temperature anedi post chestunnam maname.
+2)Ante basically Akkada s3 lo manam host chesina static website temperature ni 20degrees chupinchamani cheppam.
+3)Next Oka api gateway ni create chesi aa API gateway lo post method create chesi aa method ki call jarigithe adhi temperature ni 70 degrees ga response ivvali adhi chesam.
+So deenivalla yem use ante,Mana API  gate way use chesi mana daggara unna data ni yevaranna access cheyali ante(Normal ga API) ante adhe kadha vere valla data ni use cheyatam,in that way ikkada API gateway ki call chesela Javascript lo raasi undi , so manam
+aa javascript file lo unna invoke url ni change cheste NULL nundi adhi mana API gateway ni call  chestundi.Now API gateway ni call chesindi ante API gateway ki yem call chesindi anedi matter kaadu yevaru call chesina response ivvali anedi daani work so thus adhi response isthundi.And temperature 70* ki change avuthundi.Ikkada kuuuda cloud front link use chesi access cheyachchu.Instead of using S3 database link.
+
+
